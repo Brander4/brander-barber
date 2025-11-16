@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brander Barber</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- BOTÓN DE WHATSAPP FLOTANTE -->
+    <a href="https://wa.me/8293320367?text=Hola%20quiero%20agendar%20una%20cita" class="whatsapp" target="_blank">💬</a>
+
+    <header class="header">
+        <h1>Brander Barber</h1>
+        <p>Estilo, calidad y flow dominicano 🇩🇴</p>
+    </header>
+
+    <nav class="nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#precios">Precios</a>
+        <a href="#agendar">Agendar Cita</a>
+    </nav>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h2>Los mejores recortes del barrio</h2>
+            <p>Flow, estilo y calidad garantizada</p>
+            <a href="#agendar" class="btn">Reservar ahora</a>
+        </div>
+    </section>
+
+    <section id="servicios" class="contenedor">
+        <h2 class="titulo">Servicios</h2>
+        <div class="cards">
+            <div class="card">Recorte clásico</div>
+            <div class="card">Taper fade</div>
+            <div class="card">Barba y diseño</div>
+            <div class="card">Cejas</div>
+        </div>
+    </section>
+
+    <section id="precios" class="contenedor">
+        <h2 class="titulo">Precios</h2>
+        <ul class="lista-precios">
+            <li><strong>Recorte general:</strong> 300 pesos</li>
+            <li><strong>Barba:</strong> 150 pesos</li>
+            <li><strong>Recorte + barba:</strong> 400 pesos</li>
+        </ul>
+    </section>
+
+    <!-- FORMULARIO REAL PARA AGENDAR CITAS -->
+    <section id="agendar" class="contenedor">
+        <h2 class="titulo">Agendar Cita</h2>
+
+        <form id="formCita" class="formulario">
+            <label>Nombre completo:</label>
+            <input type="text" id="nombre" required>
+
+            <label>Fecha:</label>
+            <input type="date" id="fecha" required>
+
+            <label>Hora:</label>
+            <input type="time" id="hora" required>
+
+            <label>Servicio:</label>
+            <select id="servicio">
+                <option value="Recorte">Recorte (300 pesos)</option>
+                <option value="Barba">Barba (150 pesos)</option>
+                <option value="Recorte + Barba">Recorte + Barba (400 pesos)</option>
+            </select>
+
+            <button type="submit" class="btn">Enviar reserva</button>
+        </form>
+
+        <p id="mensaje" class="mensaje"></p>
+    </section>
+
+    <!-- PANEL DEL BARBERO PARA VER CITAS -->
+    <section id="panel" class="contenedor">
+        <h2 class="titulo">Citas reservadas</h2>
+        <ul id="listaCitas" class="lista-citas"></ul>
+    </section>
+
+    <footer class="footer">
+        <p>© 2025 Brander Barber - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
